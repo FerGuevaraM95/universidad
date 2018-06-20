@@ -1,3 +1,4 @@
+/** Media Queries **/
 html {
   box-sizing: border-box; }
 
@@ -71,8 +72,10 @@ body {
     .hero .content-hero p {
       font-size: 1.2rem; }
     .hero .content-hero form {
-      position: relative;
-      width: 40%; }
+      position: relative; }
+      @media only screen and (min-width: 768px) {
+        .hero .content-hero form {
+          width: 40%; } }
       .hero .content-hero form input[type="submit"] {
         display: block;
         position: absolute;
@@ -89,3 +92,57 @@ body {
       .hero .content-hero form input[type="text"] {
         width: 100%;
         height: 3rem; }
+
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 6rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #741d51 0%, #e44e55 100%);
+  color: #fff; }
+  .bar__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    @media only screen and (min-width: 1024px) {
+      .bar__icons {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
+    .bar__icons .icon {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background-position: 5% center !important;
+      background-size: 2.4rem;
+      text-align: center; }
+      @media only screen and (min-width: 768px) {
+        .bar__icons .icon {
+          background-position: 20% center !important; } }
+      @media only screen and (min-width: 1024px) {
+        .bar__icons .icon {
+          background-position: left center !important; } }
+      .bar__icons .icon.icon1 {
+        background-image: url("../img/icono1.png");
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .bar__icons .icon.icon2 {
+        background-image: url("../img/icono2.png");
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .bar__icons .icon.icon3 {
+        background-image: url("../img/icono3.png");
+        background-position: center center;
+        background-repeat: no-repeat; }

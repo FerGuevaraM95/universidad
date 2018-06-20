@@ -20,3 +20,27 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+//Gradient
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+
+/** Media Queries **/
+@mixin phone {
+    @media only screen and (min-width: $phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: $tablet) {
+        @content;    
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $desktop) {
+        @content;    
+    }
+}
