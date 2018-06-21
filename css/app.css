@@ -40,7 +40,7 @@ body {
       .header__shopping-cart:hover .content .button {
         display: block;
         margin-top: 1rem;
-        padding: .5rem;
+        padding: .8rem 1rem;
         text-align: center;
         text-decoration: none;
         background-color: #33c3f0;
@@ -48,6 +48,10 @@ body {
 
 .hidden {
   display: none; }
+
+.center {
+  text-align: center;
+  margin: 1em auto; }
 
 .hero {
   display: -webkit-box;
@@ -146,3 +150,59 @@ body {
         background-image: url("../img/icono3.png");
         background-position: center center;
         background-repeat: no-repeat; }
+
+/** CURSES **/
+.curses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .curses__curse {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc(50% - 1rem);
+    flex: 0 1 calc(50% - 1rem);
+    margin-bottom: 1rem;
+    border: 1px solid #c8c8c8; }
+    @media only screen and (min-width: 768px) {
+      .curses__curse {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(33% - 1rem);
+        flex: 0 1 calc(33% - 1rem); } }
+    @media only screen and (min-width: 1024px) {
+      .curses__curse {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(25% - 1rem);
+        flex: 0 1 calc(25% - 1rem); } }
+    .curses__curse__image {
+      width: 100%; }
+    .curses__curse__info-curse {
+      padding: 1rem; }
+      .curses__curse__info-curse h4 {
+        margin: 0;
+        font-size: 1.2; }
+      .curses__curse__info-curse .price {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .curses__curse__info-curse .price .regular {
+          text-decoration: line-through;
+          color: red; }
+        .curses__curse__info-curse .price .offer {
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: green; }
+      .curses__curse__info-curse .button {
+        display: block;
+        margin-top: 1rem;
+        padding: .8rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: #741d51;
+        color: #fff; }

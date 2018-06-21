@@ -52,6 +52,11 @@ body {
     display: none;
 }
 
+.center {
+    text-align: center;
+    margin: 1em auto;
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -136,5 +141,56 @@ body {
                 @include background-image('../img/icono3.png');
             }
         }
+    }
+}
+
+/** CURSES **/
+.curses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__curse {
+        flex: 0 1 calc(50% - 1rem);
+        margin-bottom: 1rem;
+        border: 1px solid darken($gray, 10);
+        @include tablet() {
+                flex: 0 1 calc(33% - 1rem);
+        }
+
+        @include desktop() {
+                flex: 0 1 calc(25% - 1rem);
+        }
+        &__image {
+            width: 100%;
+        }
+        &__info-curse {
+            padding: 1rem;
+
+            h4 {
+                margin: 0;
+                font-size: 1.2;
+            }
+
+            .price {
+                display: flex;
+                justify-content: space-between;
+
+                .regular{
+                    text-decoration: line-through;
+                    color: red;
+                }
+
+                .offer {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: green;
+                }
+
+            }
+            
+            .button {
+                    @include button($secondary);
+            }
+        }  
     }
 }

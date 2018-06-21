@@ -2,7 +2,7 @@
 @mixin button($color) {
     display: block;
     margin-top: 1rem;
-    padding: .5rem;
+    padding: .8rem 1rem;
     text-align: center;
     text-decoration: none;
     background-color: $color;
